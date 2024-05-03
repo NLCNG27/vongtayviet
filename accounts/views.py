@@ -2,9 +2,6 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
 
-def home(request):
-    return render(request, 'accounts/home.html')
-
 
 # function to sign up
 def register(request):
@@ -27,5 +24,4 @@ def login_view(request):
             login(request, user)
             return redirect('home')
     return render(request, 'accounts/login.html')
-
 
