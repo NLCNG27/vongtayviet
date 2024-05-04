@@ -22,10 +22,11 @@ from accounts import views as accounts_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', jobs_views.home, name='home'),
-    path('home.html', jobs_views.home, name='home'),
-    path('contact.html', jobs_views.contact, name='contact'),
-    path('register/', accounts_views.register, name='register'),
+    path('', jobs_views.home_view, name='home'),
+    path('home/', jobs_views.home_view, name='home'),
+    path('job_listing/', jobs_views.job_listing_view, name='job_listing'),
+    path('contact.html', jobs_views.contact_view, name='contact'),
+    path('register/', accounts_views.register_view, name='register'),
     path('login/', accounts_views.login_view, name='login'),
 
 ]
